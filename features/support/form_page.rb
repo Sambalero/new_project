@@ -2,10 +2,6 @@
 
 module FormPage 
 
-  # def initialize browser
-  #   @browser = browser
-  # end
-
 #properties
   def url
     url = "http://practicetestpage.kevinswallow.com/simple_form.html"
