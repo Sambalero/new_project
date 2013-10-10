@@ -2,9 +2,9 @@
 
 module ResponsePage 
 
-  def initialize browser
-    @browser = browser
-  end
+  # def initialize browser
+  #   @browser = browser
+  # end
 
 #properties
   def url

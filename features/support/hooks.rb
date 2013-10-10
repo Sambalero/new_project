@@ -1,7 +1,7 @@
 Before do
-  @b = Selenium::WebDriver.for :firefox
+  @browser = Selenium::WebDriver.for :firefox
 end
 
 After do
-  @b.quit
+  @browser.quit
 end

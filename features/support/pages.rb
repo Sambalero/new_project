@@ -15,20 +15,20 @@ module Pages
   end
 
   def confirm page
-     (raise "I think I might be lost!") if (@b.title != page.expected_title)
-     (raise "URL error!") if !(@b.current_url.include? page.url)
+     (raise "I think I might be lost!") if (@browser.title != page.expected_title)
+     (raise "URL error!") if !(@browser.current_url.include? page.url)
   end 
 
   def visit page_name
-    @page = Page.new @b
+    @page = Page.new @browser
     page_class = classify page_name
     @page.extend Object.const_get page_class
-    @b.navigate.to @page.url
+    @browser.navigate.to @page.url
     confirm @page
   end
 
   def on page_name
-    @page = Page.new @b
+    @page = Page.new @browser
     page_class = classify page_name
     @page.extend Object.const_get page_class
     confirm @page
